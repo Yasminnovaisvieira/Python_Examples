@@ -3,7 +3,7 @@
 dados_habitante = []
 
 def coletar_dados():
-    for pessoa in range(1, 3):
+    for pessoa in range(1, 5):
         nome = input(f"Digite o nome da {pessoa}ª pessoa: ")
         sexo = input(f"Digite o sexo {pessoa}ª pessoa: ")
         esporte_favorito = input(f"Digite o esporte favorito da {pessoa}ª pessoa: ")
