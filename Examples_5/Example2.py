@@ -6,15 +6,19 @@ def soma (*args):
     for arg in args:
         resultado += arg
 
-    print(f"A soma de todos os Args é igual a: {resultado}")
+    print(f"\nA soma de todos os Args é igual a: {resultado:.2f}")
+
+    return resultado
 
 lista_entrada = []
 
 while True: # Repete enquanto o usuário digita números
     numero = input("Digite um valor: ")
-    if numero.isnumeric(): # Verifica se a String é numérica
-        lista_entrada.append(int(numero))
-    else:
+
+    try:
+        valor = float(numero)
+        lista_entrada.append(valor)
+    except ValueError:
         break
 
-print(soma(*lista_entrada)) # Desempacota a lista e roda a função soma() com os seus argumentos
+soma(*lista_entrada) # Desempacota a lista e roda a função soma() com os seus argumentos
